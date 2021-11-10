@@ -1,13 +1,12 @@
-import MyHeap from "./MyHeap.js"
+import LinkedList from "./MyLinkedList.js";
 
-const arr = [3, 2, 5, 3, 2, 9, 1]
+const linkedList = new LinkedList();
 
-const heap = new MyHeap()
+linkedList.pushBack(1);
+linkedList.pushBack(2);
+linkedList.pushBack(3);
+linkedList.pushBack(4);
+linkedList.pushFront(0);
 
-arr.forEach(num => {
-    heap.push(num)
-})
-while (heap.size() > 0) {
-    console.log(heap.pop());
-}
-console.log(heap)
+linkedList.remove(linkedList.head.next.next.next);
+linkedList.print();
