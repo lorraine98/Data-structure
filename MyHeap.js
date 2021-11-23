@@ -34,8 +34,8 @@ export default class MyHeap {
     while (curIdx < lastIdx) {
       let leftIdx = curIdx * 2 + 1;
       let rightIdx = curIdx * 2 + 2;
-      if (!this.heap[leftIdx]) break;
-      if (!this.heap[rightIdx]) {
+      if (this.heap[leftIdx] == null) break;
+      if (this.heap[rightIdx] == null) {
         if (this.heap[curIdx] < this.heap[leftIdx]) {
           [this.heap[curIdx], this.heap[leftIdx]] = [
             this.heap[leftIdx],
@@ -58,7 +58,7 @@ export default class MyHeap {
         ];
         curIdx = maxIdx;
       } else {
-        curIdx = leftIdx;
+        break;
       }
     }
     return result;
