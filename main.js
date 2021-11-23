@@ -1,12 +1,11 @@
-import LinkedList from "./MyLinkedList.js";
+import Heap from "./MyHeap.js";
 
-const linkedList = new LinkedList();
+const heap = new Heap();
 
-linkedList.pushBack(1);
-linkedList.pushBack(2);
-linkedList.pushBack(3);
-linkedList.pushBack(4);
-linkedList.pushFront(0);
-
-linkedList.remove(linkedList.head.next.next.next);
-linkedList.print();
+let nums = [3, 2, 3, 1, 2, 4, 5, 5, 6];
+nums.forEach((num) => heap.push(num));
+console.log(heap);
+console.log(heap.pop());
+console.log(heap.pop());
+console.log(heap.pop());
+console.log(heap.pop());
